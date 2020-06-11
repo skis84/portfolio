@@ -1,0 +1,116 @@
+body {
+  font: 20px Tahoma, sans-serif;
+  font-weight: 200;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  background: green;
+  position: relative;
+  display: inline-block;
+}
+
+.square1Animation {
+  animation: shrink 1s linear 2s;
+  animation-fill-mode: forwards;
+}
+
+.square2Animation {
+  animation: shrink 1s linear 5s;
+  animation-fill-mode: forwards;
+}
+
+.square3Animation {
+  animation: shrink 1s linear 8s;
+  animation-fill-mode: forwards;
+}
+
+.text {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  font-size: 30px;
+  vertical-align: middle;
+  margin: 20px;
+  animation: hide 1s linear 12s;
+  animation-fill-mode: forwards;
+}
+
+.container1 {
+  animation: drop 1s linear 0s, wipe 1s linear 12s;
+  animation-fill-mode: forwards;
+  position: relative;
+  height: 100px;
+}
+
+.container2 {
+  opacity: 0%;
+  animation: drop 1s linear 3s, wipe 1s linear 12s;
+  animation-fill-mode: forwards;
+  position: relative;
+  height: 100px;
+}
+
+.container3 {
+  opacity: 0%;
+  animation: drop 1s linear 6s, wipe 1s linear 12s;
+  animation-fill-mode: forwards;
+  position: relative;
+  height: 100px;
+}
+
+@keyframes drop {
+  0% {
+    top: 0px;
+  }
+  2% {
+    opacity: 100%;
+  }
+  4% {
+    opacity: 80%;
+  }
+  6% {
+    opacity: 100%;
+  }
+  8% {
+    opacity: 90%;
+  }
+  30% {
+    top: 0px;
+    opacity: 100%;
+  }
+  50% {
+    top: 0px;
+  }
+  100% {
+    top: 200px;
+    opacity: 100%;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 100px;
+  }
+  100% {
+    width: 10px;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes wipe {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}

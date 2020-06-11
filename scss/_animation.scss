@@ -1,0 +1,105 @@
+.square {
+  width: 100px;
+  height: 100px;
+  background: $secondary-color;
+  position: relative;
+  display: inline-block;
+}
+
+.squareAnimation {
+  animation: shrink 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+.square1Animation {
+  @extend .squareAnimation;
+  animation-delay: 2s;
+}
+
+.square2Animation {
+  @extend .squareAnimation;
+  animation-delay: 5s;
+}
+
+.square3Animation {
+  @extend .squareAnimation;
+  animation-delay: 8s;
+}
+
+.text {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  font-size: 30px;
+  vertical-align: middle;
+  margin: 20px;
+  animation: hide 1s linear 12s;
+  animation-fill-mode: forwards;
+}
+
+.container {
+  position: relative;
+  height: 100px;
+}
+
+.container1 {
+  @extend .container;
+  animation: drop 1s linear 0s, wipe 1s linear 12s;
+  animation-fill-mode: forwards;
+}
+
+.container2 {
+  @extend .container;
+  opacity: 0%;
+  animation: drop 1s linear 3s, wipe 1s linear 12s;
+  animation-fill-mode: forwards;
+}
+
+.container3 {
+  @extend .container;
+  opacity: 0%;
+  animation: drop 1s linear 6s, wipe 1s linear 12s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drop {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 50vh;
+    opacity: 100%;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 100px;
+  }
+  100% {
+    width: 10px;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes wipe {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.closeAnimation {
+  animation-play-state: paused;
+  visibility: hidden;
+}
