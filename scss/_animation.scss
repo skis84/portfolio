@@ -3,10 +3,11 @@
   height: 100px;
   background: $secondary-color;
   position: relative;
-  display: inline-block;
+  display: none;
 }
 
 .squareAnimation {
+  display: inline-block;
   animation: shrink 0.5s linear;
   animation-fill-mode: forwards;
 }
@@ -33,6 +34,9 @@
   font-size: 30px;
   vertical-align: middle;
   margin: 20px;
+}
+
+.textAnimation {
   animation: hide 1s linear 12s;
   animation-fill-mode: forwards;
 }
@@ -62,10 +66,15 @@
   animation-fill-mode: forwards;
 }
 
-.finalContent {
-  @extend .container;
+.finalcontent {
   opacity: 0%;
-  animation: drop 1s linear 24s;
+  animation: drop 1s linear 13s;
+  animation-fill-mode: forwards;
+}
+
+.finaltext {
+  opacity: 0%;
+  animation: show 1s linear 13s;
   animation-fill-mode: forwards;
 }
 
@@ -74,7 +83,6 @@
     top: 0px;
   }
   100% {
-    top: 50vh;
     opacity: 100%;
   }
 }
@@ -97,6 +105,15 @@
   }
 }
 
+@keyframes show {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 @keyframes wipe {
   0% {
     left: 0%;
@@ -107,7 +124,9 @@
   }
 
   100% {
-    left: 100%;
+    left: 99%;
+    height: 0px;
+    opacity: 0;
   }
 }
 

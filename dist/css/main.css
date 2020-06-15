@@ -3,9 +3,10 @@
   height: 100px;
   background: #eece1a;
   position: relative;
-  display: inline-block; }
+  display: none; }
 
 .squareAnimation, .square1Animation, .square2Animation, .square3Animation {
+  display: inline-block;
   animation: shrink 0.5s linear;
   animation-fill-mode: forwards; }
 
@@ -24,7 +25,9 @@
   display: inline-block;
   font-size: 30px;
   vertical-align: middle;
-  margin: 20px;
+  margin: 20px; }
+
+.textAnimation {
   animation: hide 1s linear 12s;
   animation-fill-mode: forwards; }
 
@@ -46,11 +49,20 @@
   animation: drop 1s linear 6s, wipe 1s linear 12s;
   animation-fill-mode: forwards; }
 
+.finalcontent {
+  opacity: 0%;
+  animation: drop 1s linear 13s;
+  animation-fill-mode: forwards; }
+
+.finaltext {
+  opacity: 0%;
+  animation: show 1s linear 13s;
+  animation-fill-mode: forwards; }
+
 @keyframes drop {
   0% {
     top: 0px; }
   100% {
-    top: 50vh;
     opacity: 100%; } }
 
 @keyframes shrink {
@@ -65,11 +77,21 @@
   100% {
     opacity: 0%; } }
 
+@keyframes show {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
 @keyframes wipe {
   0% {
     left: 0%; }
+  50% {
+    left: 25%; }
   100% {
-    left: 100%; } }
+    left: 99%;
+    height: 0px;
+    opacity: 0; } }
 
 .closeAnimation {
   animation-play-state: paused;
@@ -201,6 +223,9 @@ header {
   width: 100%; }
 
 .text-secondary {
+  color: #eece1a; }
+
+.contact-link {
   color: #eece1a; }
 
 main {
