@@ -7,8 +7,6 @@ const navItems = document.querySelectorAll(".nav-item");
 
 const animationContainer = document.querySelector(".animationContainer");
 
-console.log(animationContainer);
-
 // Set Initial State of menu
 let showMenu = false;
 

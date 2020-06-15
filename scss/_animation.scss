@@ -27,7 +27,7 @@
 }
 
 .text {
-  width: 100px;
+  width: 200px;
   height: 100px;
   display: inline-block;
   font-size: 30px;
@@ -59,6 +59,13 @@
   @extend .container;
   opacity: 0%;
   animation: drop 1s linear 6s, wipe 1s linear 12s;
+  animation-fill-mode: forwards;
+}
+
+.finalContent {
+  @extend .container;
+  opacity: 0%;
+  animation: drop 1s linear 24s;
   animation-fill-mode: forwards;
 }
 
@@ -94,6 +101,11 @@
   0% {
     left: 0%;
   }
+
+  50% {
+    left: 25%;
+  }
+
   100% {
     left: 100%;
   }
