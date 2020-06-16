@@ -1,30 +1,36 @@
+$wipe-duration: 1s;
+$wipe-delay: 10s;
+$final-content-delay: 11s;
+
 .square {
   width: 100px;
   height: 100px;
-  background: $secondary-color;
+  border-radius: 2;
+  background: $fourth-color;
   position: relative;
   display: none;
 }
 
 .squareAnimation {
   display: inline-block;
-  animation: shrink 0.5s linear;
-  animation-fill-mode: forwards;
 }
 
 .square1Animation {
   @extend .squareAnimation;
-  animation-delay: 2s;
+  animation: shrink 0.5s ease 2s 1 normal forwards,
+    hide 0.1s linear $wipe-delay 1 normal forwards;
 }
 
 .square2Animation {
   @extend .squareAnimation;
-  animation-delay: 5s;
+  animation: shrink 0.5s ease 5s 1 normal forwards,
+    hide 0.1s linear $wipe-delay 1 normal forwards;
 }
 
 .square3Animation {
   @extend .squareAnimation;
-  animation-delay: 8s;
+  animation: shrink 0.5s ease 8s 1 normal forwards,
+    hide 0.1s linear $wipe-delay 1 normal forwards;
 }
 
 .text {
@@ -37,7 +43,7 @@
 }
 
 .textAnimation {
-  animation: hide 1s linear 12s;
+  animation: hide 0.1s linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
@@ -48,33 +54,35 @@
 
 .container1 {
   @extend .container;
-  animation: drop 1s linear 0s, wipe 1s linear 12s;
+  animation: drop 1s linear 0s, grow $wipe-duration linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
 .container2 {
   @extend .container;
   opacity: 0%;
-  animation: drop 1s linear 3s, wipe 1s linear 12s;
+  animation: drop 1s linear 3s, wipe $wipe-duration linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
 .container3 {
   @extend .container;
   opacity: 0%;
-  animation: drop 1s linear 6s, wipe 1s linear 12s;
+  animation: drop 1s linear 6s, wipe $wipe-duration linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
 .finalcontent {
   opacity: 0%;
-  animation: drop 1s linear 13s;
+  animation: drop 1s linear $final-content-delay;
   animation-fill-mode: forwards;
 }
 
 .finaltext {
+  @extend .text;
+  height: auto;
   opacity: 0%;
-  animation: show 1s linear 13s;
+  animation: show 1s linear $final-content-delay;
   animation-fill-mode: forwards;
 }
 
@@ -93,6 +101,18 @@
   }
   100% {
     width: 10px;
+    background: $secondary-color;
+  }
+}
+
+@keyframes grow {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 100%;
+    height: 10px;
+    background: $secondary-color;
   }
 }
 
