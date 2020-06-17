@@ -1,5 +1,4 @@
 import sources from "./images.js";
-("use strict");
 
 let selectedIndex = 0;
 
@@ -14,7 +13,7 @@ const leftArrow = document.querySelector("#arrowleft");
 if (leftArrow) {
   leftArrow.addEventListener("click", () => {
     list.id = thumbnailsID;
-    animate(--selectedIndex);
+    toggleImage(--selectedIndex);
   });
 }
 
@@ -23,7 +22,7 @@ const rightArrow = document.querySelector("#arrowright");
 if (rightArrow) {
   rightArrow.addEventListener("click", () => {
     list.id = thumbnailsID;
-    animate(++selectedIndex);
+    toggleImage(++selectedIndex);
   });
 }
 
@@ -56,7 +55,7 @@ const images = sources.map((source, index) => {
 
   image.addEventListener("load", () => fade(image));
   image.addEventListener("click", () => {
-    animate(index);
+    toggleImage(index);
   });
   toggle(image).src = `img/gallery/${source}`;
 
@@ -65,13 +64,11 @@ const images = sources.map((source, index) => {
   return image;
 });
 
-console.log(images);
-
 const fade = image => {
   toggle(image).removeAttribute("loading");
 };
 
-const animate = async index => {
+const toggleImage = async index => {
   const direction = list.id == scrollerID ? -1 : 1;
 
   if (direction > 0) {
@@ -123,13 +120,13 @@ const animate = async index => {
 
 window.addEventListener("keyup", ({ key }) => {
   if (key != "Escape" || list.id != scrollerID) return;
-  animate();
+  toggleImage();
 });
 
-window.addEventListener("touch", () => {
+/*window.addEventListener("touch", () => {
   if (list.id != scrollerID) return;
   animate();
-});
+});*/
 
 // Add image list to body
 body.append(list);
