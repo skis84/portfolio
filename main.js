@@ -9,7 +9,7 @@ const animationContainer = document.querySelector(".animationContainer");
 
 // Set Initial State of menu
 let showMenu = false;
-
+ 
 menuBtn.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
