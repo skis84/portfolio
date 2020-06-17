@@ -1,4 +1,5 @@
 import sources from "./images.js";
+("use strict");
 
 let selectedIndex = 0;
 
@@ -54,7 +55,9 @@ const images = sources.map((source, index) => {
   const image = item.querySelector("img");
 
   image.addEventListener("load", () => fade(image));
-  image.addEventListener("click", () => animate(index));
+  image.addEventListener("click", () => {
+    animate(index);
+  });
   toggle(image).src = `img/gallery/${source}`;
 
   list.append(item);
@@ -62,12 +65,13 @@ const images = sources.map((source, index) => {
   return image;
 });
 
+console.log(images);
+
 const fade = image => {
   toggle(image).removeAttribute("loading");
 };
 
 const animate = async index => {
-  const { innerWidth } = window;
   const direction = list.id == scrollerID ? -1 : 1;
 
   if (direction > 0) {
@@ -88,54 +92,32 @@ const animate = async index => {
     hideElement("#arrows"); // Hide arrows in thumbnail view
   }
 
-  const thumbnail =
-    images[direction > 0 ? index : Math.round(list.scrollLeft / innerWidth)];
+  const thumbnail = images[index];
+
   if (thumbnail) {
-    const duplicate = thumbnail.cloneNode();
+    if (direction > 0) {
+      // Open big image
+      list.id = scrollerID;
+      list.style.opacity = 1;
 
-    if (direction > 0) toggle(duplicate);
+      for (let i = 0; i < list.children.length; i++) {
+        let child = list.children.item(i);
+        if (i == index) {
+          // Show
+          child.style.visibility = "visible";
+        } else {
+          child.style.visibility = "hidden";
+        }
+      }
+    } else {
+      list.style.opacity = 1;
+      list.id = thumbnailsID;
 
-    await body.appendChild(duplicate);
-
-    // Set list id to thumbnails if direction is -1
-    if (direction < 0) {
-      toggle(list).id = thumbnailsID;
-      thumbnail.scrollIntoView({ block: "center" });
-      if (list.scrollLeft) list.scrollLeft = 0;
+      for (let i = 0; i < list.children.length; i++) {
+        // Show all
+        list.children.item(i).style.visibility = "visible";
+      }
     }
-
-    const animations = {
-      opacity: [1, 0]
-    };
-    // Reverse animation if direction is -1
-    if (direction < 0)
-      Object.values(animations).forEach(keyframes => keyframes.reverse());
-
-    requestAnimationFrame(() => {
-      toggle(thumbnail);
-      toggle(direction < 0 ? list : duplicate);
-      list
-        .animate(
-          {
-            opacity: animations.opacity
-          },
-          {
-            duration: 10
-          }
-        )
-        .addEventListener(
-          "finish",
-          () => {
-            if (direction > 0) {
-              list.id = scrollerID;
-              list.scrollLeft = index * innerWidth;
-            }
-            toggle(thumbnail);
-            duplicate.remove();
-          },
-          { once: true }
-        );
-    });
   }
 };
 

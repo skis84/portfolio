@@ -222,8 +222,11 @@ ul {
   padding: 0; }
 
 #scroller li {
-  scroll-snap-align: center;
-  scroll-snap-stop: always; }
+  position: absolute;
+  visibility: hidden;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
 
 .hidden {
   visibility: hidden; }
@@ -428,7 +431,7 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("/img/portrait_small.jpg");
+      background: url("img/portrait_small.jpg");
       width: 150px;
       height: 150px; }
   .about-info {
