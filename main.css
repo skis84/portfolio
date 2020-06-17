@@ -294,7 +294,7 @@ ul img {
   visibility: hidden;
 }
 
-#scroller img {
+li img {
   height: 90vh;
   width: 80vw;
 }
