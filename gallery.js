@@ -67,23 +67,17 @@ const fade = image => {
 };
 
 const animate = async index => {
-  //selectedIndex = index;
-
   const { innerWidth } = window;
   const direction = list.id == scrollerID ? -1 : 1;
 
-  console.log(index);
-  console.log(direction);
   if (direction > 0) {
     // Show arrows for browsing
     showElement("#arrows");
     if (index == 0) {
       // Show only right arrow
-      console.log("Hide arrow left");
       hideElement("#arrowleft");
     } else if (index == 7) {
       // Show only left arrow
-      console.log("Hide arrow right");
       hideElement("#arrowright");
     } else {
       // Show both arrows
