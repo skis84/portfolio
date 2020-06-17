@@ -80,7 +80,7 @@ const animate = async index => {
     if (index == 0) {
       // Show only right arrow
       hideElement("#arrowleft");
-    } else if (index == 7) {
+    } else if (index == images.length - 1) {
       // Show only left arrow
       hideElement("#arrowright");
     } else {
