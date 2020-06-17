@@ -56,6 +56,7 @@ const images = sources.map((source, index) => {
   image.addEventListener("load", () => fade(image));
   image.addEventListener("click", () => animate(index));
   image.addEventListener("touchstart", () => animate(index));
+  image.addEventListener("touch", () => animate(index));
   toggle(image).src = `img/gallery/${source}`;
 
   list.append(item);
