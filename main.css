@@ -277,7 +277,7 @@ ul img {
   padding: 20px;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 450px) {
   #thumbnails {
     grid: auto-flow calc((100vw - (3 + 1) * 15px) / 3) / repeat(3, 1fr);
   }
@@ -285,7 +285,7 @@ ul img {
 
 #scroller {
   grid: 100% / auto-flow 100%;
-  scroll-snap-type: x mandatory;
+  /*scroll-snap-type: x mandatory;*/
   padding: 0;
 }
 

@@ -223,11 +223,11 @@ ul {
 
 #scroller li {
   position: absolute;
-  visibility: hidden;
-  width: 80%; }
+  visibility: hidden; }
 
 #scroller img {
-  height: 90vh; }
+  height: 90vh;
+  width: 80vw; }
 
 .hidden {
   visibility: hidden; }
