@@ -292,7 +292,7 @@ ul img {
 #scroller li {
   position: absolute;
   visibility: hidden;
-  width: 80%;
+  width: 80vw;
 }
 
 #scroller img {
