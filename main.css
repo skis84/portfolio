@@ -48,7 +48,7 @@
 }
 
 .container1 {
-  animation: drop 1s linear 0s, grow 1s linear 10s;
+  animation: drop 1s linear 0s, wipe 1s linear 10s;
   animation-fill-mode: forwards;
 }
 

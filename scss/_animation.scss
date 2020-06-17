@@ -50,7 +50,7 @@ $height: 100px;
 
 .container1 {
   @extend .container;
-  animation: drop 1s linear 0s, grow $wipe-duration linear $wipe-delay;
+  animation: drop 1s linear 0s, wipe $wipe-duration linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
