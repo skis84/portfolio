@@ -5,7 +5,7 @@ $fourth-color: #9a1750;
 $fifth-color: darken(#e3e2df, 3);
 
 $show-home-image: true;
-$home-image: url("/img/background.jpg");
+$home-image: url("img/background.jpg");
 $background-opacity: 0.9;
 
 @mixin easeOut {
