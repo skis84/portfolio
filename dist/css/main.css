@@ -1,30 +1,24 @@
-/*$primary-color: #272727;
-$secondary-color: #ffe400;
-$third-color: #747474;
-$fourth-color: #ff652f;
-$fifth-color: #14a76c;*/
 .square {
   width: 100px;
   height: 100px;
-  border-radius: 2;
-  background: #9a1750;
+  background: #5d001e;
   position: relative;
   display: none; }
 
-.squareAnimation, .square1Animation, .square2Animation, .square3Animation {
-  display: inline-block; }
-
 .square1Animation {
+  display: inline-block;
   animation: shrink 0.5s ease 2s 1 normal forwards, hide 0.1s linear 10s 1 normal forwards; }
 
 .square2Animation {
+  display: inline-block;
   animation: shrink 0.5s ease 5s 1 normal forwards, hide 0.1s linear 10s 1 normal forwards; }
 
 .square3Animation {
+  display: inline-block;
   animation: shrink 0.5s ease 8s 1 normal forwards, hide 0.1s linear 10s 1 normal forwards; }
 
 .text, .finaltext {
-  width: 200px;
+  width: 50vw;
   height: 100px;
   display: inline-block;
   font-size: 30px;
@@ -106,10 +100,6 @@ $fifth-color: #14a76c;*/
     left: 99%;
     height: 0px;
     opacity: 0; } }
-
-.closeAnimation {
-  animation-play-state: paused;
-  visibility: hidden; }
 
 .menu-btn {
   position: absolute;
@@ -222,6 +212,10 @@ ul {
   gap: 20px;
   padding: 20px; }
 
+@media (max-width: 450px) {
+  #thumbnails {
+    grid: auto-flow calc((100vw - (3 + 1) * 15px) / 3)/repeat(3, 1fr); } }
+
 #scroller {
   grid: 100% / auto-flow 100%;
   scroll-snap-type: x mandatory;
@@ -241,13 +235,13 @@ ul {
 
 #arrowleft {
   float: left;
-  padding-left: 10px; }
+  padding: 10px; }
   #arrowleft:hover {
     color: #5d001e; }
 
 #arrowright {
   float: right;
-  padding-right: 10px; }
+  padding: 10px; }
   #arrowright:hover {
     color: #5d001e; }
 

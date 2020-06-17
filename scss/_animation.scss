@@ -1,41 +1,37 @@
 $wipe-duration: 1s;
 $wipe-delay: 10s;
 $final-content-delay: 11s;
+$height: 100px;
 
 .square {
   width: 100px;
-  height: 100px;
-  border-radius: 2;
-  background: $fourth-color;
+  height: $height;
+  background: $secondary-color;
   position: relative;
   display: none;
 }
 
-.squareAnimation {
-  display: inline-block;
-}
-
 .square1Animation {
-  @extend .squareAnimation;
+  display: inline-block;
   animation: shrink 0.5s ease 2s 1 normal forwards,
     hide 0.1s linear $wipe-delay 1 normal forwards;
 }
 
 .square2Animation {
-  @extend .squareAnimation;
+  display: inline-block;
   animation: shrink 0.5s ease 5s 1 normal forwards,
     hide 0.1s linear $wipe-delay 1 normal forwards;
 }
 
 .square3Animation {
-  @extend .squareAnimation;
+  display: inline-block;
   animation: shrink 0.5s ease 8s 1 normal forwards,
     hide 0.1s linear $wipe-delay 1 normal forwards;
 }
 
 .text {
-  width: 200px;
-  height: 100px;
+  width: 50vw;
+  height: $height;
   display: inline-block;
   font-size: 30px;
   vertical-align: middle;
@@ -49,7 +45,7 @@ $final-content-delay: 11s;
 
 .container {
   position: relative;
-  height: 100px;
+  height: $height;
 }
 
 .container1 {
@@ -148,9 +144,4 @@ $final-content-delay: 11s;
     height: 0px;
     opacity: 0;
   }
-}
-
-.closeAnimation {
-  animation-play-state: paused;
-  visibility: hidden;
 }
