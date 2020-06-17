@@ -258,7 +258,7 @@ body {
 
 /*body,ul {margin: 0;}*/
 ul {
-  display: grid;
+  /* display: grid;*/
   height: 100%;
   overflow: hidden;
   list-style: none;
