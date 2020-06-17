@@ -54,12 +54,7 @@ const images = sources.map((source, index) => {
   const image = item.querySelector("img");
 
   image.addEventListener("load", () => fade(image));
-  image.addEventListener("click", () => {
-    animate(index);
-    alert("test");
-  });
-  image.addEventListener("touchstart", () => animate(index));
-  image.addEventListener("touch", () => alert(index));
+  image.addEventListener("click", () => animate(index));
   toggle(image).src = `img/gallery/${source}`;
 
   list.append(item);
@@ -146,6 +141,11 @@ const animate = async index => {
 
 window.addEventListener("keyup", ({ key }) => {
   if (key != "Escape" || list.id != scrollerID) return;
+  animate();
+});
+
+window.addEventListener("touch", () => {
+  if (list.id != scrollerID) return;
   animate();
 });
 
