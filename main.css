@@ -258,7 +258,7 @@ body {
 
 /*body,ul {margin: 0;}*/
 ul {
-  /* display: grid;*/
+  display: grid;
   height: 100%;
   overflow: hidden;
   list-style: none;
@@ -284,9 +284,9 @@ ul img {
 }
 
 #scroller {
-  /*grid: 100% / auto-flow 100%;
+  grid: 100% / auto-flow 100%;
   scroll-snap-type: x mandatory;
-  padding: 0;*/
+  padding: 0;
 }
 
 #scroller li {
@@ -294,7 +294,7 @@ ul img {
   visibility: hidden;
 }
 
-li img {
+#scroller img {
   height: 90vh;
   width: 80vw;
 }
