@@ -56,27 +56,27 @@ $height: 100px;
 
 .container1 {
   @extend .container;
-  animation: drop 1s linear 0s, wipe $wipe-duration linear $wipe-delay;
+  animation: show 1s linear 0s, wipe $wipe-duration linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
 .container2 {
   @extend .container;
   opacity: 0%;
-  animation: drop 1s linear 3s, wipe $wipe-duration linear $wipe-delay;
+  animation: show 1s linear 3s, wipe $wipe-duration linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
 .container3 {
   @extend .container;
   opacity: 0%;
-  animation: drop 1s linear 6s, wipe $wipe-duration linear $wipe-delay;
+  animation: show 1s linear 6s, wipe $wipe-duration linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
 .finalcontent {
   opacity: 0%;
-  animation: drop 1s linear $final-content-delay;
+  animation: show 1s linear $final-content-delay;
   animation-fill-mode: forwards;
 }
 
@@ -86,15 +86,6 @@ $height: 100px;
   opacity: 0%;
   animation: show 1s linear $final-content-delay;
   animation-fill-mode: forwards;
-}
-
-@keyframes drop {
-  0% {
-    top: 0px;
-  }
-  100% {
-    opacity: 100%;
-  }
 }
 
 @keyframes shrink {

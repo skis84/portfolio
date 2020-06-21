@@ -39,22 +39,22 @@
   height: 100px; }
 
 .container1 {
-  animation: drop 1s linear 0s, wipe 1s linear 10s;
+  animation: show 1s linear 0s, wipe 1s linear 10s;
   animation-fill-mode: forwards; }
 
 .container2 {
   opacity: 0%;
-  animation: drop 1s linear 3s, wipe 1s linear 10s;
+  animation: show 1s linear 3s, wipe 1s linear 10s;
   animation-fill-mode: forwards; }
 
 .container3 {
   opacity: 0%;
-  animation: drop 1s linear 6s, wipe 1s linear 10s;
+  animation: show 1s linear 6s, wipe 1s linear 10s;
   animation-fill-mode: forwards; }
 
 .finalcontent {
   opacity: 0%;
-  animation: drop 1s linear 11s;
+  animation: show 1s linear 11s;
   animation-fill-mode: forwards; }
 
 .finaltext {
@@ -62,12 +62,6 @@
   opacity: 0%;
   animation: show 1s linear 11s;
   animation-fill-mode: forwards; }
-
-@keyframes drop {
-  0% {
-    top: 0px; }
-  100% {
-    opacity: 100%; } }
 
 @keyframes shrink {
   0% {
