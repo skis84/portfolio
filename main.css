@@ -1,5 +1,6 @@
 .animationContainer {
   text-align: left;
+  font-size: 0.5rem;
 }
 
 .square {
@@ -30,14 +31,13 @@
 
 .text,
 .finaltext {
-  width: 30vw;
+  width: 45vw;
   height: 100px;
+  /*height: $height;*/
   display: inline-block;
-  font-size: 2rem;
-  /*vertical-align: middle;*/
-  margin: 2rem;
-  animation: hide 0.2s linear 10s, wipe 0.1s linear 10s;
-  animation-fill-mode: forwards;
+  font-size: 1.8rem;
+  vertical-align: middle;
+  margin-left: 20px;
 }
 
 .textAnimation {
@@ -132,14 +132,6 @@
 }
 
 @keyframes wipe {
-  0% {
-    height: 100%;
-    width: 100%;
-  }
-  90% {
-    height: 50%;
-    width: 50%;
-  }
   100% {
     height: 0px;
     width: 0px;
