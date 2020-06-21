@@ -54,6 +54,10 @@
 
 .finalcontent {
   opacity: 0%;
+  -moz-opacity: 0%;
+  /* Firefox and Mozilla browsers */
+  -webkit-opacity: 0%;
+  /* WebKit browser e.g. Safari */
   animation: show 1s linear 11s;
   animation-fill-mode: forwards; }
 
@@ -86,9 +90,17 @@
 
 @keyframes show {
   0% {
-    opacity: 0%; }
+    opacity: 0%;
+    -moz-opacity: 0%;
+    /* Firefox and Mozilla browsers */
+    -webkit-opacity: 0%;
+    /* WebKit browser e.g. Safari */ }
   100% {
-    opacity: 100%; } }
+    opacity: 100%;
+    -moz-opacity: 100%;
+    /* Firefox and Mozilla browsers */
+    -webkit-opacity: 100%;
+    /* WebKit browser e.g. Safari */ } }
 
 @keyframes wipe {
   100% {

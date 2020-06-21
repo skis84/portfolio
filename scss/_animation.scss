@@ -76,6 +76,8 @@ $height: 100px;
 
 .finalcontent {
   opacity: 0%;
+  -moz-opacity: 0%; /* Firefox and Mozilla browsers */
+  -webkit-opacity: 0%; /* WebKit browser e.g. Safari */
   animation: show 1s linear $final-content-delay;
   animation-fill-mode: forwards;
 }
@@ -122,9 +124,13 @@ $height: 100px;
 @keyframes show {
   0% {
     opacity: 0%;
+    -moz-opacity: 0%; /* Firefox and Mozilla browsers */
+    -webkit-opacity: 0%; /* WebKit browser e.g. Safari */
   }
   100% {
     opacity: 100%;
+    -moz-opacity: 100%; /* Firefox and Mozilla browsers */
+    -webkit-opacity: 100%; /* WebKit browser e.g. Safari */
   }
 }
 
