@@ -132,8 +132,8 @@
 .menu-btn {
   position: absolute;
   z-index: 3;
-  right: 35px;
-  top: 35px;
+  right: 25px;
+  top: 25px;
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
@@ -352,7 +352,7 @@ h3 {
 h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 h1.sm-heading,
 h2.sm-heading,
@@ -381,7 +381,7 @@ header {
 }
 
 main {
-  padding: 4rem;
+  padding: 2rem;
   min-height: calc(100vh - 60px);
 }
 main .icons {
