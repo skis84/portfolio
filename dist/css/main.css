@@ -22,7 +22,7 @@
   animation: shrink 0.5s ease 8s 1 normal forwards, hide 0.1s linear 10s 1 normal forwards; }
 
 .text, .finaltext {
-  width: 45vw;
+  width: 50vw;
   height: 100px;
   /*height: $height;*/
   display: inline-block;
