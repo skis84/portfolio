@@ -1,3 +1,7 @@
+.animationContainer {
+  text-align: left;
+}
+
 .square {
   width: 100px;
   height: 100px;
@@ -26,16 +30,18 @@
 
 .text,
 .finaltext {
-  width: 50vw;
+  width: 30vw;
   height: 100px;
   display: inline-block;
-  font-size: 30px;
-  vertical-align: middle;
-  margin: 20px;
+  font-size: 2rem;
+  /*vertical-align: middle;*/
+  margin: 2rem;
+  animation: hide 0.2s linear 10s, wipe 0.1s linear 10s;
+  animation-fill-mode: forwards;
 }
 
 .textAnimation {
-  animation: hide 0.1s linear 10s;
+  animation: hide 0.2s linear 10s, wipe 0.1s linear 10s;
   animation-fill-mode: forwards;
 }
 
@@ -127,15 +133,16 @@
 
 @keyframes wipe {
   0% {
-    left: 0%;
+    height: 100%;
+    width: 100%;
   }
-  50% {
-    left: 25%;
+  90% {
+    height: 50%;
+    width: 50%;
   }
   100% {
-    left: 99%;
     height: 0px;
-    opacity: 0;
+    width: 0px;
   }
 }
 
