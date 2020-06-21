@@ -62,22 +62,20 @@ $height: 100px;
 
 .container2 {
   @extend .container;
-  opacity: 0%;
+  opacity: 0;
   animation: show 1s linear 3s, wipe $wipe-duration linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
 .container3 {
   @extend .container;
-  opacity: 0%;
+  opacity: 0;
   animation: show 1s linear 6s, wipe $wipe-duration linear $wipe-delay;
   animation-fill-mode: forwards;
 }
 
 .finalcontent {
-  opacity: 0%;
-  -moz-opacity: 0%; /* Firefox and Mozilla browsers */
-  -webkit-opacity: 0%; /* WebKit browser e.g. Safari */
+  opacity: 0;
   animation: show 1s linear $final-content-delay;
   animation-fill-mode: forwards;
 }
@@ -85,7 +83,7 @@ $height: 100px;
 .finaltext {
   @extend .text;
   height: auto;
-  opacity: 0%;
+  opacity: 0;
   animation: show 1s linear $final-content-delay;
   animation-fill-mode: forwards;
 }
@@ -113,24 +111,20 @@ $height: 100px;
 
 @keyframes hide {
   0% {
-    opacity: 100%;
+    opacity: 1;
   }
 
   100% {
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
 @keyframes show {
   0% {
-    opacity: 0%;
-    -moz-opacity: 0%; /* Firefox and Mozilla browsers */
-    -webkit-opacity: 0%; /* WebKit browser e.g. Safari */
+    opacity: 0;
   }
   100% {
-    opacity: 100%;
-    -moz-opacity: 100%; /* Firefox and Mozilla browsers */
-    -webkit-opacity: 100%; /* WebKit browser e.g. Safari */
+    opacity: 1;
   }
 }
 
