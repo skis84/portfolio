@@ -412,6 +412,8 @@ main {
       font-size: 4rem;
       line-height: 1;
       margin: 1rem; }
+    main .sm-heading {
+      padding: 0; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
