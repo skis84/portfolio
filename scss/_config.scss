@@ -17,7 +17,7 @@ $background-opacity: 0.9;
     &#bg-img {
       background: $home-image;
       background-attachment: fixed;
-      background-size: cover;
+      background-size: auto;
 
       &:after {
         content: "";
