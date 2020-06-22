@@ -126,3 +126,7 @@ const { main } = document.querySelector("#gallery");
 if (main) {
   main.appendChild(list);
 }
+
+if (template) {
+  template.appendChild(list);
+}
