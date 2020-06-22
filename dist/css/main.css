@@ -210,7 +210,6 @@ ul {
 
 #scroller {
   grid: 100% / auto-flow 100%;
-  /*scroll-snap-type: x mandatory;*/
   padding: 0; }
 
 #scroller li {
@@ -218,8 +217,8 @@ ul {
   visibility: hidden; }
 
 #scroller img {
-  height: 90vh;
-  width: 80vw; }
+  height: 80vh;
+  max-width: 80%; }
 
 .hidden {
   visibility: hidden; }
