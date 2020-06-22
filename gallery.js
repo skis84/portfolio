@@ -122,7 +122,7 @@ window.addEventListener("keyup", ({ key }) => {
 });
 
 // Add image list to main
-const main = document.getElementById("gallery");
-if (main) {
-  main.append(list);
+const { body } = document; //.getElementById("gallery");
+if (body) {
+  body.append(list);
 }
