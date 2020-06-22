@@ -411,7 +411,7 @@ main {
     main .lg-heading {
       line-height: 1;
       margin: 1rem; }
-    main main .lg-heading {
+    main h1 .lg-heading {
       font-size: 4rem; }
   ul.menu-nav,
   div.menu-branding {
