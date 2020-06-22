@@ -124,5 +124,5 @@ window.addEventListener("keyup", ({ key }) => {
 // Add image list to main
 const { main } = document.querySelector("#gallery");
 if (main) {
-  main.append(list);
+  main.appendChild(list);
 }
