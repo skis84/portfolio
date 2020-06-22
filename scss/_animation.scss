@@ -31,7 +31,7 @@ $height: 100px;
 .square3Animation {
   display: inline-block;
   animation: shrink 0.5s ease 8s 1 normal forwards,
-    hide 0.1s linear $wipe-delay 1 normal forwards;
+    grow 1s linear $wipe-delay 1 normal forwards;
 }
 
 .text {
@@ -69,7 +69,7 @@ $height: 100px;
 .container3 {
   @extend .container;
   opacity: 0;
-  animation: show 1s linear 6s, wipe $wipe-duration linear $wipe-delay;
+  animation: show 1s linear 6s; // , wipe $wipe-duration linear $wipe-delay
   animation-fill-mode: forwards;
 }
 
@@ -97,7 +97,7 @@ $height: 100px;
   }
 }
 
-/*@keyframes grow {
+@keyframes grow {
   0% {
     width: 10px;
   }
@@ -106,7 +106,7 @@ $height: 100px;
     height: 10px;
     background: $secondary-color;
   }
-}*/
+}
 
 @keyframes hide {
   0% {

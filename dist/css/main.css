@@ -19,7 +19,7 @@
 
 .square3Animation {
   display: inline-block;
-  animation: shrink 0.5s ease 8s 1 normal forwards, hide 0.1s linear 10s 1 normal forwards; }
+  animation: shrink 0.5s ease 8s 1 normal forwards, grow 1s linear 10s 1 normal forwards; }
 
 .text, .finaltext {
   width: 50vw;
@@ -48,7 +48,7 @@
 
 .container3 {
   opacity: 0;
-  animation: show 1s linear 6s, wipe 1s linear 10s;
+  animation: show 1s linear 6s;
   animation-fill-mode: forwards; }
 
 .finalcontent {
@@ -69,16 +69,14 @@
     width: 10px;
     background: #5d001e; } }
 
-/*@keyframes grow {
+@keyframes grow {
   0% {
-    width: 10px;
-  }
+    width: 10px; }
   100% {
     width: 100%;
     height: 10px;
-    background: $secondary-color;
-  }
-}*/
+    background: #5d001e; } }
+
 @keyframes hide {
   0% {
     opacity: 1; }
