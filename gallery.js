@@ -26,8 +26,6 @@ if (rightArrow) {
   });
 }
 
-const { body } = document;
-
 // Define toggle function to make element hidden or not
 const toggle = element => {
   element.classList.toggle("hidden");
@@ -123,10 +121,8 @@ window.addEventListener("keyup", ({ key }) => {
   toggleImage();
 });
 
-/*window.addEventListener("touch", () => {
-  if (list.id != scrollerID) return;
-  animate();
-});*/
-
-// Add image list to body
-body.append(list);
+// Add image list to main
+const { main } = document.querySelector("main");
+if (main) {
+  main.append(list);
+}
