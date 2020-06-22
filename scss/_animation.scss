@@ -37,7 +37,6 @@ $height: 100px;
 .text {
   width: 50vw;
   height: 100px;
-  /*height: $height;*/
   display: inline-block;
   font-size: 1.8rem;
   vertical-align: middle;
@@ -98,7 +97,7 @@ $height: 100px;
   }
 }
 
-@keyframes grow {
+/*@keyframes grow {
   0% {
     width: 10px;
   }
@@ -107,7 +106,7 @@ $height: 100px;
     height: 10px;
     background: $secondary-color;
   }
-}
+}*/
 
 @keyframes hide {
   0% {
