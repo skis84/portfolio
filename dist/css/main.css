@@ -310,6 +310,8 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+  main#gallery {
+    padding: 0rem; }
 
 .about-info {
   display: grid;
