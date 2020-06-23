@@ -69,7 +69,7 @@ $height: 100px;
 .container3 {
   @extend .container;
   opacity: 0;
-  animation: show 1s linear 6s; // , wipe $wipe-duration linear $wipe-delay
+  animation: show 1s linear 6s;
   animation-fill-mode: forwards;
 }
 

@@ -204,10 +204,6 @@ ul {
   gap: 20px;
   padding: 20px; }
 
-@media (max-width: 450px) {
-  #thumbnails {
-    grid: auto-flow calc((100vw - (3 + 1) * 15px) / 3)/repeat(3, 1fr); } }
-
 #scroller {
   grid: 100% / auto-flow 100%;
   padding: 0; }
@@ -441,4 +437,6 @@ main {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  #thumbnails {
+    grid: auto-flow calc((100vw - (3 + 1) * 15px) / 3)/repeat(3, 1fr); } }

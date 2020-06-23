@@ -78,4 +78,11 @@
   .projects {
     grid-template-columns: 1fr;
   }
+
+  #thumbnails {
+    $columns: 3;
+    $gutter: 15px;
+    $size: calc((100vw - (#{$columns} + 1) * #{$gutter}) / #{$columns});
+    grid: auto-flow $size / repeat($columns, 1fr);
+  }
 }

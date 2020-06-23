@@ -27,15 +27,6 @@ ul {
   padding: $gutter;
 }
 
-@media (max-width: 450px) {
-  #thumbnails {
-    $columns: 3;
-    $gutter: 15px;
-    $size: calc((100vw - (#{$columns} + 1) * #{$gutter}) / #{$columns});
-    grid: auto-flow $size / repeat($columns, 1fr);
-  }
-}
-
 #scroller {
   grid: 100% / auto-flow 100%;
   padding: 0;
