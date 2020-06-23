@@ -34,10 +34,6 @@ ul {
     $size: calc((100vw - (#{$columns} + 1) * #{$gutter}) / #{$columns});
     grid: auto-flow $size / repeat($columns, 1fr);
   }
-
-  main {
-    padding: 0;
-  }
 }
 
 #scroller {
