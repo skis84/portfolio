@@ -4,10 +4,7 @@
   "description": "Portfolio project",
   "main": "index.js",
   "scripts": {
-    "copy": "cp dist/css/main.css main.css",
-    "css": "node-sass scss/ -o dist/css",
-    "sass": "node-sass -w scss/ -o dist/css --recursive",
-    "deploy": "npm run css && npm run copy"
+    "sass": "node-sass scss/ -o ."
   },
   "author": "",
   "license": "ISC",
