@@ -8,6 +8,3 @@ SASS is used for style definitions, if you change style definitions, run `npm ru
 
 To run this project, just download the code and open up index.html with Live Server extension in Visual studio code.
 
-This portfolio is deployed to: https://skis84.github.io/portfolio/
-
-Video of the project running: https://youtu.be/fnh7EhIvokY
