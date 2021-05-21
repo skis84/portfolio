@@ -27,6 +27,9 @@ function toggleMenu() {
     // Set Menu state
     showMenu = true;
   } else {
+    // Some changes to trigger analysis
+    console.log("Add some changes here just for the sake of changes")
+   
     menuBtn.classList.remove("close");
     menu.classList.remove("show");
     menuNav.classList.remove("show");
