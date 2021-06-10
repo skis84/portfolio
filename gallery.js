@@ -17,14 +17,6 @@ if (leftArrow) {
   });
 }
 
-// Add event listener to right arrow in scroller view
-const rightArrow = document.querySelector("#arrowright");
-if (rightArrow) {
-  rightArrow.addEventListener("click", () => {
-    list.id = thumbnailsID;
-    toggleImage(++selectedIndex);
-  });
-}
 
 // Define toggle function to make element hidden or not
 const toggle = element => {
