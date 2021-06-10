@@ -1,0 +1,14 @@
+[
+        [
+            "DepRule", ".../middleware", "-!->", ".../ui", 
+            {"description": "Middleware components must not use any UI code"}
+        ],
+        [
+            "DepRule", ".../src/models", "-!->", ".../src/view", 
+            {"description": "There should be no dependencies from business models to presentation views"}
+        ],
+        [
+            "DepRule", ".../junit junit of version 4.0.0", "<--", "Nothing", 
+            {"description": "Junit 4.0.0 should not anymore be used anywhere"}
+        ]
+]
